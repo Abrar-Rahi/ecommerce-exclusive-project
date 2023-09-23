@@ -4,7 +4,18 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-red-500'>abrar atajai</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
+      <h1>abrar rahi</h1>
     </>
   )
 }
