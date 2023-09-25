@@ -1,0 +1,32 @@
+.slick-dots {
+    bottom: 20px !important;  
+}
+
+.slick-dots ul{
+    background: transparent !important;
+}
+
+.slick-dots ul li{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(209, 209, 209);
+}
+
+.slick-dots li button {
+    width: 10px !important;
+    height: 10px !important;
+    padding: 6px !important;
+    border-radius: 50%;
+}
+
+
+.slick-dots li button:before {
+    font-family: 'none' !important;
+    opacity: 0 !important;
+}
+
+.slick-active button{
+    
+    background: rgb(255, 0, 0) !important;
+}
