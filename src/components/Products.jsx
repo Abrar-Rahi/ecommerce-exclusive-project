@@ -6,21 +6,39 @@ import {AiOutlineEye} from "react-icons/ai"
 import {FaStar} from "react-icons/fa"
 import PortionHeading from './PortionHeading'
 import Flex from './Flex'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../slices/cartSlices'
 
-const Products = ({src,text,text2,text3}) => {
+const Products = ({src,text,text2,text3,badgeType,badgeText,}) => {
+
+  let dispatch = useDispatch()
+
+  let handleCart = ()=>{
+    dispatch(addToCart(
+      {
+        name : text,
+        quantity : 1,
+        rate : text2,
+        oldRate : text3,
+        img : src,
+      }
+    ))
+  }
   return (
     <div className='w-270'>
        <div className='group cursor-pointer'>
          <div className='relative bg-secondary h-250 rounded  overflow-hidden'>
-            <Badge text="-35%"/>
+            <Badge text={badgeText} type={badgeType}/>
             <div className='bg-white w-7 h-7 rounded-full absolute top-4 right-4 flex items-center justify-center'>
              <MdFavoriteBorder className='text-2xl text-black'/>
             </div>
             <div className='bg-white w-7 h-7 rounded-full absolute top-14 right-4 flex items-center justify-center'>
              <AiOutlineEye className='text-2xl text-black'/>
             </div>
-            <Images className="mx-auto mt-2" src={src}/>
-            <button className='py-2 bg-black w-full rounded-b font-pop font-medium text-base text-white absolute -bottom-10 left-0  group-hover:bottom-0 duration-300 '>Add To Cart</button>
+            <div className='flex items-center justify-center mt-10'>
+              <Images className="" src={src}/>
+            </div>
+            <button onClick={handleCart} className='py-2 bg-black w-full rounded-b font-pop font-medium text-base text-white absolute -bottom-10 left-0  group-hover:bottom-0 duration-300 '>Add To Cart</button>
         </div>
           <PortionHeading className="mt-4 mb-2" text={text}/>
        </div>

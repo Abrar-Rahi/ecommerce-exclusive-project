@@ -1,5 +1,4 @@
 
-
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -9,6 +8,11 @@ import {
 import Rootlayout from "./components/Rootlayout"
 import Homepage from "./pages/Homepage"
 import Aboutpage from "./pages/Aboutpage"
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Contact from "./pages/Contact";
+import Errorpage from "./pages/Errorpage";
+import Cartpage from "./pages/Cartpage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +21,11 @@ const router = createBrowserRouter(
 
       <Route path="/" element={<Homepage/>}></Route>
       <Route path="/about" element={<Aboutpage/>}></Route>
+      <Route path="/sign-up" element={<Signup/>}></Route>
+      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/contact" element={<Contact/>}></Route>
+      <Route path="/cart" element={<Cartpage/>}></Route>
+      <Route path="*" element={<Errorpage/>}></Route>
 
     </Route>
     </>

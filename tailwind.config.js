@@ -18,6 +18,7 @@ export default {
         'gren': '#00FF66',
         'secondary': '#F5F5F5',
         'bdrclr': '#D9D9D9',
+        'cartBG': '#FFF4F4',
       },
       spacing: {
         '140': '140px',
@@ -26,12 +27,20 @@ export default {
         '30': '30px',
         '87': '87px',
         '67': '67px',
+        '75': '75px',
         '270': '270px',
         '250': '250px',
+        '230': '230px',
         '120': '120px',
         '150': '150px',
         '206': '206px',
         '233': '233px',
+        '284': '284px',
+        '300': '300px',
+        '470': '470px',
+        '324': '324px',
+        '40%': '40%',
+        
         
       },
       letterSpacing: {
@@ -39,6 +48,10 @@ export default {
       },
       fontSize: {
         px : '1px',
+        54 : '54px',
+        32 : '32px',
+        6 : '6px',
+        110 : '110px',
       },
       maxWidth: {
         'container': '1170px',

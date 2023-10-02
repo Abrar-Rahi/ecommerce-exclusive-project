@@ -19,14 +19,21 @@ const Navbar = () => {
         </div>
         <div className='w-3/5'>
             <ul className='flex gap-x-12 ml-120'>
-              <Link to={"/"}>
+              <Link to="/">
                 <List text="Home"/>
               </Link>
-              <List text="Contacts"/>
-              <Link to={"/about"}>
+
+              <Link to="/contact">
+                <List text="Contacts"/>
+              </Link>
+
+              <Link to="/about">
                 <List text="About"/>
               </Link>
+
+              <Link to="/sign-up">
                 <List text="Sign Up"/>
+              </Link>
             </ul>
         </div>
         <div className='w-2/5 '>
