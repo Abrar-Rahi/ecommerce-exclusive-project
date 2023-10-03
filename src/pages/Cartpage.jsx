@@ -6,6 +6,7 @@ import Images from '../components/Images'
 import {FaAngleDown,FaAngleUp} from 'react-icons/fa'
 import Button from '../components/Button'
 import PortionHeading from '../components/PortionHeading'
+import { Link } from 'react-router-dom'
 
 const Cartpage = () => {
     let cartData = useSelector(state => state.cartItem.value)
@@ -39,7 +40,7 @@ const Cartpage = () => {
                     </div>
                  </div>
                 </div>
-                <div className='basis-2/12 '>{item.rate.replace("$","") * item.quantity}$</div>
+                <div className='basis-2/12 '>${item.rate.replace("$","") * item.quantity}</div>
             </Flex>
             </>
           ))}
@@ -67,17 +68,25 @@ const Cartpage = () => {
                   <p>Subtotal:</p>
                   <p>1750$</p>
                 </div>
+
                 <div className='w-full h-px bg-black '></div>
+
                 <div className='flex item-center justify-between font-pop font-normal text-base text-black'>
                   <p>Shipping:</p>
                   <p>free</p>
                 </div>
+
                 <div className='w-full h-px bg-black '></div>
+
                 <div className='flex item-center justify-between font-pop font-normal text-base text-black'>
                   <p>Total:</p>
                   <p>1750$</p>
                 </div>
-                <Button text="Procees to checkout" className="mx-auto"/>
+                <div className="mx-auto">
+                <Link to="/checkout">
+                 <Button text="Procees to checkout"/>
+                </Link>
+                </div>
              </div>
         </Flex>
        </Container>
